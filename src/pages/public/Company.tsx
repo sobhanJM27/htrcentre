@@ -39,14 +39,20 @@ const Company = () => {
             )}
           >
             <img
-              src={companyData?.imageUrl}
+              src={"https://retrofit-nxb4.onrender.com" + companyData?.imageUrl}
               alt={companyData?.name}
-              className="h-64 w-full object-cover"
+              className="h-full w-full object-cover rounded-t-3xl"
             />
             <div className="flex flex-col gap-8 p-8">
               <div className="flex items-center gap-4">
                 <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-muted">
-                  <Logo src={companyData?.logoUrl!} size="2.5rem" />
+                  <Logo
+                    src={
+                      "https://retrofit-nxb4.onrender.com" +
+                      companyData?.logoUrl
+                    }
+                    size="2.5rem"
+                  />
                 </div>
                 <div className="flex flex-col">
                   <h1 className={cn("text-primary", textTitle2)}>

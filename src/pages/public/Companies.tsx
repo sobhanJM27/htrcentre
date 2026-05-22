@@ -59,7 +59,9 @@ const Companies = () => {
                   <div className="flex items-center gap-4">
                     <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-muted">
                       <Logo
-                        src={company.logoUrl}
+                        src={
+                          "https://retrofit-nxb4.onrender.com" + company.logoUrl
+                        }
                         alt={company.name}
                         size="2rem"
                       />

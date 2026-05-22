@@ -8,7 +8,7 @@ export type MobileNavProps = {
 
 const MobileNav = ({ setOpen }: MobileNavProps) => {
   return (
-    <nav className="flex md:hidden justify-between items-center z-10000">
+    <nav className="flex md:hidden justify-between items-center">
       <div className="z-40">
         <ThemeToggle />
       </div>
@@ -16,7 +16,7 @@ const MobileNav = ({ setOpen }: MobileNavProps) => {
         HTRCentre
       </span>
       <button onClick={() => setOpen((prev) => !prev)}>
-        <Hamburger className="w-6 h-6 text-muted-foreground dark:text-foreground" />
+        <Hamburger className="w-6 h-6 text-muted-foreground dark:text-foreground cursor-pointer" />
       </button>
     </nav>
   );

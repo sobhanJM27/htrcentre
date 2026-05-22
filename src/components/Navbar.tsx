@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <header
       className={cn(
-        "bg-primary-foreground sticky top-0 w-full p-4 z-10000",
+        "bg-primary-foreground sticky top-0 w-full p-4 z-50",
         shadows.navbar,
       )}
     >
