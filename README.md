@@ -1,6 +1,5 @@
-```markdown
 <p align="center">
-  <img src="./logo.png" alt="HTRC Logo" width="160" style="border-radius:12px;" />
+  <img src="./public/logo.png" alt="HTRC Logo" width="160" style="border-radius:12px;" />
 </p>
 
 <h1 align="center">🏡 Home Thermal Retrofit Calculator (HTRC)</h1>
