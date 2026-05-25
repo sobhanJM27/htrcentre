@@ -14,3 +14,16 @@ export const tags = [
     id: uuidv4(),
   },
 ];
+
+export const experts_suppliars = [
+  {
+    id: uuidv4(),
+    title: "Find Experts",
+    desc: "Inspectors & Contractors",
+  },
+  {
+    id: uuidv4(),
+    title: "Browse Suppliars",
+    desc: "Affiliate Products",
+  },
+];

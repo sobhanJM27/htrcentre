@@ -15,21 +15,27 @@ const Footer = () => {
   return (
     <footer className="bg-background border-t border-border/50 py-18">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-2">
-          <div className="lg:col-span-4 flex flex-col items-center md:items-start gap-3">
+        <div className="flex max-footer:flex-col gap-4 max-footer:gap-8 px-6 pb-8 justify-between max-footer:items-center">
+          <div className="lg:col-span-4 flex flex-col items-center footer:items-start gap-3">
             <Link to="/">
               <Logo size="4rem" src="./logo.png" />
             </Link>
-            <p className="leading-relaxed text-center md:text-left max-w-sm">
+            <p className="leading-relaxed text-center footer:text-left max-w-sm">
               Professional tools for home thermal efficiency. We make complex
               calculations simple and accessible for everyone.
             </p>
             <div className="flex gap-5">
               <IconWrapper className="rounded-full">
-                <SocialIcon href="https://www.linkedin.com/in/babak-sadeghi-tabatabai/" icon={<LinkedIn />} />
+                <SocialIcon
+                  href="https://www.linkedin.com/in/babak-sadeghi-tabatabai/"
+                  icon={<LinkedIn />}
+                />
               </IconWrapper>
               <IconWrapper className="rounded-full">
-                <SocialIcon href="mailto:sadeghi.t.b@gmail.com" icon={<Mail />} />
+                <SocialIcon
+                  href="mailto:sadeghi.t.b@gmail.com"
+                  icon={<Mail />}
+                />
               </IconWrapper>
             </div>
           </div>

@@ -16,7 +16,7 @@ const NameDetails = () => {
         </div>
       </div>
       <div className="flex justify-center flex-1">
-        <Logo src="/logo.png" size="13rem" />
+        <Logo src="/home.png" className="w-full" alt="Thermal Efficiency Visualization" />
       </div>
     </section>
   );

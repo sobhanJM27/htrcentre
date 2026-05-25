@@ -16,10 +16,9 @@ type SidebarProps = {
 const Sidebar = ({ open, setOpen }: SidebarProps) => {
   return (
     <>
-      <BackDrop open={open} setOpen={setOpen} />
       <aside
         className={cn(
-          "hidden fixed top-0 left-0 w-64 bg-sidebar-background text-sidebar-foreground rounded-xl max-sidebar:flex flex-col gap-2 border-2 border-sidebar-border opacity-0 translate-x-full transition-all duration-300",
+          "hidden fixed top-0 left-0 z-40 w-64 bg-sidebar-background text-sidebar-foreground rounded-xl max-sidebar:flex flex-col gap-2 border-2 border-sidebar-border opacity-0 translate-x-full transition-all duration-300",
           { "opacity-100 translate-x-0 z-50": open },
         )}
       >
@@ -45,6 +44,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
           ))}
         </ul>
       </aside>
+      <BackDrop open={open} setOpen={setOpen} />
     </>
   );
 };

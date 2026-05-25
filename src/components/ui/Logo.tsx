@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export type LogoProps = {
   src: string;
-  size: string;
+  size?: string;
   alt?: string;
   className?: string;
 };

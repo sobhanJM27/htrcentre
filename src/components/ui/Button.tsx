@@ -3,7 +3,7 @@ import type { ButtonHTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
 
 const ButtonStyles = cva(
-  "relative overflow-hidden inline-flex items-center justify-center rounded-md font-medium transition-all duration-300 active:scale-95 z-0 cursor-pointer",
+  "relative overflow-hidden inline-flex items-center justify-center rounded-md font-medium transition-all duration-300 active:scale-95 z-0 cursor-pointer text-nowrap max-sm:text-sm",
   {
     variants: {
       intent: {
@@ -22,10 +22,10 @@ const ButtonStyles = cva(
           hover:before:translate-y-0! hover:text-accent-foreground before:transition-transform before:duration-300
         `,
         ghost: `
-          bg-transparent text-foreground
-          before:absolute before:inset-0 before:z-[-1]
-          before:bg-muted before:translate-y-full
-          hover:before:translate-y-0 before:transition-transform before:duration-300
+          bg-transparent!
+          before:absolute! before:inset-0! before:z-[-1]!
+          before:bg-muted/30!  before:translate-y-full!
+          hover:before:translate-y-0! before:transition-transform! before:duration-300!
         `,
       },
       size: {

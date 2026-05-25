@@ -1,9 +1,14 @@
 import { useState } from "react";
-import DesktopNav from "./ui/DesktopNav";
 import MobileNav from "./ui/MobileNav";
 import Sidebar from "./ui/Sidebar";
 import { cn } from "@/lib/utils";
 import { shadows } from "@/constants/styles";
+import { Link } from "react-router-dom";
+import Slogan from "./ui/Slogan";
+import { Logo } from "./ui/Logo";
+import { navbarTabs } from "@/constants/navbarTabs";
+import NavbarTab from "./ui/NavbarTab";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -16,7 +21,27 @@ const Navbar = () => {
       )}
     >
       <Sidebar open={open} setOpen={setOpen} />
-      <DesktopNav />
+      <nav className="hidden md:flex items-center h-12 rounded-2xl gap-5">
+        <div className="flex flex-1 items-center gap-1">
+          <Link to="/">
+            <Logo src="/logo.png" size="3.5rem" />
+          </Link>
+          <Slogan className="text-lg" />
+        </div>
+        <ul className="flex justify-center gap-6">
+          {navbarTabs.map((item) => (
+            <NavbarTab
+              key={item.id}
+              url={item.path}
+              text={item.name}
+              place="navbar"
+            />
+          ))}
+        </ul>
+        <div className="flex flex-1 justify-end">
+          <ThemeToggle />
+        </div>
+      </nav>
       <MobileNav setOpen={setOpen} />
     </header>
   );

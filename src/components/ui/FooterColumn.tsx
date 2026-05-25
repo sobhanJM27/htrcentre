@@ -15,7 +15,7 @@ const FooterColumn = ({ title, links }: FooterColumnProps) => {
           <li key={link.id}>
             <Link
               to={link.path}
-              className="text-muted! dark:text-muted-foreground! dark:hover:text-primary! text-sm hover:text-primary! transition-all duration-300 inline-block hover:translate-x-1! break-all"
+              className="text-muted! dark:text-muted-foreground! dark:hover:text-primary! text-sm hover:text-primary! transition-all duration-300 inline-block hover:translate-x-1!"
             >
               {link.name}
             </Link>

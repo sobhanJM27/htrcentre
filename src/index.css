@@ -55,6 +55,8 @@
 
   /* Screens */
   --breakpoint-sidebar: 820px;
+  --breakpoint-footer: 780px;
+  --breakpoint-mobile-button: 350px;
 
   /* Fonts */
   --font-allura: "Allura", cursive;

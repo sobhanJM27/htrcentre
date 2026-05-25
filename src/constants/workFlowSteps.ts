@@ -4,19 +4,19 @@ export const workFlowSteps = [
   {
     number: "01",
     title: "Input Building Details",
-    desc: "Enter dimensions and current insulation status.",
+    desc: "Enter building data for heat loss estimation.",
     id: uuidv4(),
   },
   {
     number: "02",
-    title: "Select Target Grade",
-    desc: "Choose your desired thermal efficiency level.",
+    title: "Select Room Components",
+    desc: "Choose specific room components and explore various thermal retrofit scenarios.",
     id: uuidv4(),
   },
   {
     number: "03",
     title: "Get Your Report",
-    desc: "Receive a detailed PDF with recommendations.",
+    desc: "Receive a detailed room results: energy saving & payback time.",
     id: uuidv4(),
   },
 ];

@@ -15,8 +15,12 @@ const MobileNav = ({ setOpen }: MobileNavProps) => {
       <span className="font-semibold text-lg text-background dark:text-foreground">
         HTRCentre
       </span>
-      <button onClick={() => setOpen((prev) => !prev)}>
-        <Hamburger className="w-6 h-6 text-muted-foreground dark:text-foreground cursor-pointer" />
+      <button
+        onClick={() => setOpen((prev) => !prev)}
+        style={{ touchAction: "manipulation" }} 
+        className="relative z-100 touch-manipulation cursor-pointer"
+      >
+        <Hamburger className="w-6 h-6 text-muted-foreground dark:text-foreground" />
       </button>
     </nav>
   );
