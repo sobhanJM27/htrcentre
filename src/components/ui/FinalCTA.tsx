@@ -5,9 +5,9 @@ import { Reveal } from "@/utils/reveal";
 
 export default function FinalCTA() {
   return (
-    <section className="relative py-16 px-4 overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 flex justify-center">
-        <div className="h-80 md:h-96 w-125 md:w-150 bg-primary/20 blur-[120px] rounded-full" />
+    <section className="relative py-16 px-4">
+      <div className="pointer-events-none absolute inset-0 flex justify-center overflow-hidden rounded-full">
+        <div className="h-80 md:h-96 w-125 md:w- bg-primary/20 blur-[120px]" />
       </div>
 
       <Reveal delay={200} side="bottom">

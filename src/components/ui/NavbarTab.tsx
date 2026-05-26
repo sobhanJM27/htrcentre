@@ -13,8 +13,8 @@ const NavbarTab = ({ url, text, place }: Props) => {
         to={url}
         className={({ isActive }) =>
           isActive
-            ? "text-primary! border-b-2 border-primary transition duration-300 rounded-sm"
-            : "text-muted-foreground! border-b-2 border-transparent"
+            ? "text-primary border-b-2 border-primary transition duration-300 rounded-sm"
+            : "text-muted-foreground border-b-2 border-transparent"
         }
       >
         {place === "navbar" ? (

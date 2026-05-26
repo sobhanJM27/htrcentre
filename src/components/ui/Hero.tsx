@@ -44,7 +44,7 @@ const Hero = () => {
         <div className="flex max-mobile-button:flex-col justify-center gap-4">
           {experts_suppliars.map((item) => (
             <div key={item.id} className="flex flex-col gap-1 items-center">
-              <a href="#">
+              <a>
                 <Button intent="primary" size="lg">
                   {item.title}
                 </Button>
@@ -59,7 +59,7 @@ const Hero = () => {
           {tags.map((tag) => (
             <span
               key={tag.id}
-              className="bg-secondary text-ring rounded-full border border-border px-3 py-1 text-xs font-semibold"
+              className="bg-secondary text-ring rounded-full border border-borderz px-3 py-1 text-xs font-semibold"
             >
               {tag.name}
             </span>

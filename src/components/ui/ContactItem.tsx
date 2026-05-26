@@ -13,7 +13,7 @@ type ContactItemProps = {
 const ContactItem = ({ icon, mainHref, children }: ContactItemProps) => {
   return (
     <div className="group flex items-center gap-4">
-      <IconWrapper className="rounded-full group-hover:scale-110!">
+      <IconWrapper className="rounded-full group-hover:scale-110">
         <SocialIcon href={mainHref} icon={icon} />
       </IconWrapper>
       <div

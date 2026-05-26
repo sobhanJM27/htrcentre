@@ -8,6 +8,8 @@ import IconWrapper from "./ui/IconWrapper";
 import { Logo } from "./ui/Logo";
 import LinkedIn from "./ui/icons/Linkedin";
 import Mail from "./ui/icons/Mail";
+import { cn } from "@/lib/utils";
+import { border1 } from "@/constants/styles";
 
 const Footer = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -60,7 +62,12 @@ const Footer = () => {
             className="group flex items-center gap-2 text-sm font-medium text-muted dark:text-muted-foreground hover:text-primary! transition-colors duration-300"
           >
             <span>Back to top</span>
-            <div className="p-2 rounded-full border border-border group-hover:border-primary transition-colors">
+            <div
+              className={cn(
+                "p-2 rounded-full group-hover:border-primary transition-colors",
+                border1,
+              )}
+            >
               <LeftArrow className="w-4 h-4 rotate-90" />
             </div>
           </button>

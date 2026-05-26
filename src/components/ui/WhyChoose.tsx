@@ -2,7 +2,13 @@ import { whyChooseItems } from "@/constants/whyChooseItems";
 import IconWrapper from "./IconWrapper";
 import { Reveal } from "@/utils/reveal";
 import { cn } from "@/lib/utils";
-import { bgTextColor2, sectionStyle, shadows, textTitle3 } from "@/constants/styles";
+import {
+  bgTextColor2,
+  border1,
+  sectionStyle,
+  shadows,
+  textTitle3,
+} from "@/constants/styles";
 
 const WhyChoose = () => {
   return (
@@ -16,15 +22,12 @@ const WhyChoose = () => {
       </p>
       <div className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
         {whyChooseItems.map(({ icon: Icon, title, desc, id }, index) => (
-          <Reveal
-            key={id}
-            delay={index * 200}
-            side="bottom"
-          >
+          <Reveal key={id} delay={index * 200} side="bottom">
             <div
               className={cn(
-                "rounded-xl border border-border bg-muted/20 dark:bg-card p-6 text-center h-full",
+                "rounded-xl bg-muted/20 dark:bg-card p-6 text-center h-full",
                 shadows.hoverLift,
+                border1,
               )}
             >
               <IconWrapper
@@ -34,9 +37,7 @@ const WhyChoose = () => {
                 <Icon className="h-6 w-6" />
               </IconWrapper>
               <h3 className="text-lg font-semibold">{title}</h3>
-              <p className="text-sm">
-                {desc}
-              </p>
+              <p className="text-sm">{desc}</p>
             </div>
           </Reveal>
         ))}

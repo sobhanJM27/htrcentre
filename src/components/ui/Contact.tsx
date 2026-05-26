@@ -21,7 +21,7 @@ const Contact = () => {
             <a
               key={item.id}
               href={item.path}
-              className="text-muted hover:text-primary! transition-colors duration-300 after:content-[','] last:after:content-['']"
+              className="hover:text-primary transition-colors duration-300 after:content-[','] last:after:content-['']"
             >
               {item.title}
             </a>
@@ -34,7 +34,7 @@ const Contact = () => {
               key={item.id}
               target="_blank"
               rel="noreferrer"
-              className="hover:text-primary! transition-colors duration-300 after:content-[','] last:after:content-['']"
+              className="hover:text-primary transition-colors duration-300 after:content-[','] last:after:content-['']"
             >
               {item.title}
             </a>
@@ -48,7 +48,7 @@ const Contact = () => {
             href="https://www.linkedin.com/in/babak-sadeghi-tabatabai"
             target="_blank"
             rel="noreferrer"
-            className="text-muted hover:text-primary! transition-colors duration-300 break-all"
+            className="hover:text-primary transition-colors duration-300 break-all"
           >
             linkedin.com/in/babak-sadeghi-tabatabai
           </a>

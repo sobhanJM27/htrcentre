@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./pages/public/Layout";
 import Home from "./pages/public/Home";
-import Loader from "./components/ui/Loader";
+import Loader from "./components/ui/icons/Loader";
 import ScrollToTop from "./utils/scrollToTops";
 
 const Companies = lazy(() => import("./pages/public/Companies"));

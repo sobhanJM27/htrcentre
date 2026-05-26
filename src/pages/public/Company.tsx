@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { sectionStyle, shadows, textTitle2 } from "@/constants/styles";
+import { border1, sectionStyle, shadows, textTitle2 } from "@/constants/styles";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/ui/Logo";
 import Button from "@/components/ui/Button";
@@ -34,8 +34,9 @@ const Company = () => {
         >
           <div
             className={cn(
-              "flex flex-col rounded-3xl border border-border bg-card",
+              "flex flex-col rounded-3xl bg-card",
               shadows.baseCard,
+              border1,
             )}
           >
             <img

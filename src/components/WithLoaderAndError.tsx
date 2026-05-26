@@ -1,5 +1,5 @@
 import { type ReactNode } from "react";
-import Loader from "./ui/Loader";
+import Loader from "./ui/icons/Loader";
 import ErrorHandler from "./ErrorHandler";
 
 export type WithLoaderAndErrorProps<T> = {

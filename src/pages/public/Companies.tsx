@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import {
   bgTextColor1,
+  border1,
   sectionStyle,
   shadows,
   textTitle1,
@@ -50,9 +51,10 @@ const Companies = () => {
                 key={company.id}
                 to={`/company/${company.id}`}
                 className={cn(
-                  "group relative flex flex-col gap-4 justify-between rounded-2xl border border-border bg-muted/20 p-6",
+                  "group relative flex flex-col gap-4 justify-between rounded-2xl bg-muted/20 p-6",
                   shadows.deepCard,
                   shadows.hoverSoft,
+                  border1,
                 )}
               >
                 <div className="flex flex-col gap-4">
