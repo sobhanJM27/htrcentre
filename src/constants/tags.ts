@@ -19,7 +19,7 @@ export const experts_suppliars = [
   {
     id: uuidv4(),
     title: "Find Experts",
-    desc: "Inspectors & Contractors",
+    desc: "Energy Assessor & Contractors",
   },
   {
     id: uuidv4(),

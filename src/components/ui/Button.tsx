@@ -31,7 +31,7 @@ const ButtonStyles = cva(
       size: {
         base: "h-10 px-5 text-sm",
         sm: "h-8 px-3 text-xs",
-        lg: "h-12 px-6 text-base",
+        lg: "h-12 px-6 text-base w-full",
         fit: "px-4 py-2 w-fit",
       },
     },

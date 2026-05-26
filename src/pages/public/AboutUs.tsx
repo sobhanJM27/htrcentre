@@ -6,7 +6,8 @@ import NameDetails from "@/components/ui/NameDetails";
 import Trust from "@/components/ui/Trust";
 import Values from "@/components/ui/Values";
 import { whatWeDo, whatWeStarted } from "@/constants/aboutTexts";
-import { mainStyle } from "@/constants/styles";
+import { mainStyle, textBody1 } from "@/constants/styles";
+import { cn } from "@/lib/utils";
 import SeoTags from "@/utils/seo";
 
 export default function AboutPage() {
@@ -19,20 +20,24 @@ export default function AboutPage() {
       />
       <main className={mainStyle}>
         <AboutHero />
-        <div className="flex flex-col md:flex-row gap-16 py-16 px-4">
+        <div className="flex flex-col md:flex-row gap-8 lg:gap-12 py-16 px-4">
           <AboutText title="What We Do">
             {whatWeDo.map((item) => (
-              <p key={item.id}>{item.text}</p>
+              <p key={item.id} className={cn(textBody1)}>
+                {item.text}
+              </p>
             ))}
           </AboutText>
           <AboutText title="Why We Started">
             {whatWeStarted.map((item) => (
-              <p key={item.id}>{item.text}</p>
+              <p key={item.id} className={cn(textBody1)}>
+                {item.text}
+              </p>
             ))}
           </AboutText>
         </div>
         <AboutText title="Our Mission" className="px-4">
-          <p>
+          <p className={cn(textBody1)}>
             Our mission is to simplify thermal retrofit decisions and accelerate
             energy efficiency improvements in residential buildings. By
             providing accessible analysis tools and a trusted professional

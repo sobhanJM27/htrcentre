@@ -28,32 +28,30 @@ const Hero = () => {
           Your All-in-One Platform
         </h2>
         <p>
-          Calculate your building's insulation needs and find the best retrofit
-          options with HTRC professional tools.
+          Beyond a calculator We connect you with certified energy experts and
+          verified affiliate suppliers.
         </p>
         <a>
-          <Button intent="outline" size="lg">
+          <Button intent="primary" size="lg">
             <Calculator className="w-5 h-5" />
             Start Thermal Assessment
           </Button>
         </a>
         <p className="max-w-xl pt-4">
-          Beyond a calculator We connect you with certified energy experts and
-          verified affiliate suppliers.
+          Calculate your building's insulation needs and find the best retrofit
+          options with HTRC professional tools.
         </p>
-        <div className="w-full max-w-sm flex gap-3 max-mobile-button:flex-col">
+        <div className="flex max-mobile-button:flex-col justify-center gap-4">
           {experts_suppliars.map((item) => (
-            <div key={item.id} className="flex-1 flex flex-col gap-1">
-              <a href="#" className="w-full">
-                <Button
-                  intent="primary"
-                  size="lg"
-                  className="w-full max-mobile-button:w-2/3"
-                >
+            <div key={item.id} className="flex flex-col gap-1 items-center">
+              <a href="#">
+                <Button intent="primary" size="lg">
                   {item.title}
                 </Button>
               </a>
-              <span className="text-sm">{item.desc}</span>
+              <span className="text-xs md:text-sm text-center max-w-40">
+                {item.desc}
+              </span>
             </div>
           ))}
         </div>

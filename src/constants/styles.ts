@@ -19,13 +19,22 @@ export const shadows = {
     "hover:shadow-[0_28px_70px_-18px_oklch(var(--primary)/0.26)]! hover:-translate-y-1! transition-all duration-300",
 } as const;
 
-export const textTitle1 = "text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight";
-export const textTitle2 = "text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight";
-export const textTitle3 = "text-2xl sm:text-3xl lg:text-4xl font-semibold leading-snug";
-export const textTitle4 = "text-xl sm:text-2xl lg:text-3xl font-semibold leading-normal";
+export const textTitle1 =
+  "text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight";
+export const textTitle2 =
+  "text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight";
+export const textTitle3 =
+  "text-2xl sm:text-3xl lg:text-4xl font-semibold leading-snug";
+export const textTitle4 =
+  "text-xl sm:text-2xl lg:text-3xl font-semibold leading-normal";
+export const textBody1 = "text-base leading-8 text-justify hyphens-auto";
+export const textBody2 =
+  "text-lg leading-8 lg:text-left text-center lg:text-justify hyphens-auto";
 
 export const mainStyle = "flex flex-col items-center gap-5 p-8";
 export const sectionStyle = "gap-4 py-16 px-4";
 
-export const bgTextColor1 = "bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text";
-export const bgTextColor2 = "bg-gradient-to-r from-secondary to-primary text-transparent bg-clip-text";
+export const bgTextColor1 =
+  "bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text";
+export const bgTextColor2 =
+  "bg-gradient-to-r from-secondary to-primary text-transparent bg-clip-text";

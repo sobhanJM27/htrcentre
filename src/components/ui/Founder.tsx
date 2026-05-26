@@ -1,11 +1,11 @@
-import { sectionStyle, textTitle4 } from "@/constants/styles";
+import { sectionStyle, textBody1, textTitle4 } from "@/constants/styles";
 import { cn } from "@/lib/utils";
 
 const Founder = () => {
   return (
     <section className={cn("flex flex-col", sectionStyle)}>
       <h2 className={textTitle4}>Founder</h2>
-      <p className="leading-relaxed">
+      <p className={cn(textBody1)}>
         HTRC was founded by Babak Sadeghi Tabatabai, with the vision of creating
         a practical digital platform that bridges the gap between technical
         energy analysis and real‑world retrofit solutions. The project combines

@@ -14,8 +14,8 @@ export default function WorkFlow() {
             practical retrofit recommendations.
           </p>
         </div>
-        <div className="relative space-y-8">
-          <div className="absolute left-5 top-0 hidden h-full w-px bg-border sm:block" />
+        <div className="relative flex flex-col gap-8">
+          <div className="absolute left-5 top-0 h-full w-px bg-border block" />
           {workFlowSteps.map((step, index) => (
             <StepItem key={step.id} {...step} index={index} />
           ))}
