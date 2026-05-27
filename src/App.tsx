@@ -8,6 +8,7 @@ import ScrollToTop from "./utils/scrollToTops";
 const Companies = lazy(() => import("./pages/public/Companies"));
 const Company = lazy(() => import("./pages/public/Company"));
 const AboutUs = lazy(() => import("./pages/public/AboutUs"));
+const NotFound = lazy(() => import("./pages/public/NotFound"));
 
 function App() {
   return (
@@ -37,6 +38,14 @@ function App() {
             element={
               <Suspense fallback={<Loader type="main" />}>
                 <AboutUs />
+              </Suspense>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <Suspense fallback={<Loader type="main" />}>
+                <NotFound />
               </Suspense>
             }
           />

@@ -9,7 +9,7 @@ export const workFlowSteps = [
   },
   {
     number: "02",
-    title: "Select Room Components",
+    title: "Select Room Components & Thermal Retrofit Scenarios",
     desc: "Choose specific room components and explore various thermal retrofit scenarios.",
     id: uuidv4(),
   },

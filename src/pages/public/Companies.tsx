@@ -5,6 +5,7 @@ import {
   border1,
   sectionStyle,
   shadows,
+  textBody1,
   textTitle1,
 } from "@/constants/styles";
 import { Logo } from "@/components/ui/Logo";
@@ -27,16 +28,14 @@ const Companies = () => {
         description="Explore companies involved in sustainable building, energy retrofit solutions, and innovative technologies improving building performance."
         keywords="retrofit companies, energy retrofit, sustainable buildings, construction technology, retrofit solutions"
       />
-      <section
-        className={cn("flex flex-col gap-14!", sectionStyle, bgTextColor1)}
-      >
-        <div className="flex flex-col items-center text-center gap-2">
+      <main className={cn("flex flex-col gap-14!", sectionStyle, bgTextColor1)}>
+        <section className="flex flex-col items-center text-center gap-2">
           <h1 className={textTitle1}>Companies</h1>
           <p className="text-foreground">
             Explore organizations contributing to sustainable building and
             energy retrofit innovation.
           </p>
-        </div>
+        </section>
         <WithLoaderAndError
           {...{
             data: companyQuery.data,
@@ -45,7 +44,7 @@ const Companies = () => {
             error: companyQuery.error,
           }}
         >
-          <div className="grid gap-8 md:grid-cols-2">
+          <section className="grid gap-8 md:grid-cols-2">
             {companyQuery.data?.map((company: Company) => (
               <Link
                 key={company.id}
@@ -72,7 +71,7 @@ const Companies = () => {
                       {company.name}
                     </h3>
                   </div>
-                  <p className="text-sm">{company.description}</p>
+                  <p className={cn("text-sm!", textBody1)}>{company.description}</p>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-medium text-primary">
@@ -85,9 +84,9 @@ const Companies = () => {
                 <div className="absolute! inset-0! opacity-0! transition group-hover:opacity-100! bg-linear-to-tr! from-primary/20! rounded-xl via-transparent! to-transparent!" />
               </Link>
             ))}
-          </div>
+          </section>
         </WithLoaderAndError>
-      </section>
+      </main>
     </>
   );
 };

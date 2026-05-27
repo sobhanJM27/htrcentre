@@ -1,5 +1,11 @@
 import { useParams } from "react-router-dom";
-import { border1, sectionStyle, shadows, textTitle2 } from "@/constants/styles";
+import {
+  border1,
+  sectionStyle,
+  shadows,
+  textBody1,
+  textTitle2,
+} from "@/constants/styles";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/ui/Logo";
 import Button from "@/components/ui/Button";
@@ -29,10 +35,8 @@ const Company = () => {
         keywords={`retrofit company, energy retrofit, sustainable buildings, construction technology, retrofit solutions, ${companyData?.name}`}
       />
       <WithLoaderAndError {...{ data: companyData, isLoading, isError, error }}>
-        <section
-          className={cn("mx-auto max-w-5xl flex flex-col", sectionStyle)}
-        >
-          <div
+        <main className={cn("mx-auto max-w-5xl flex flex-col", sectionStyle)}>
+          <section
             className={cn(
               "flex flex-col rounded-3xl bg-card",
               shadows.baseCard,
@@ -65,7 +69,7 @@ const Company = () => {
                   </p>
                 </div>
               </div>
-              <p className="leading-relaxed text-muted-foreground">
+              <p className={cn("text-muted-foreground", textBody1)}>
                 {companyData?.description}
               </p>
               <div className="flex flex-wrap items-center gap-6">
@@ -77,8 +81,8 @@ const Company = () => {
                 </span>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </main>
       </WithLoaderAndError>
     </>
   );
