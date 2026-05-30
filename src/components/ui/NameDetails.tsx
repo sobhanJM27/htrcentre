@@ -1,5 +1,5 @@
 import { whyName } from "@/constants/aboutTexts";
-import { Logo } from "./Image";
+import { Image } from "./Image";
 import { textBody1, textTitle4 } from "@/constants/styles";
 import { cn } from "@/lib/utils";
 
@@ -17,7 +17,7 @@ const NameDetails = () => {
         </div>
       </div>
       <div className="flex justify-center flex-1">
-        <Logo src="/logo.png" size="15rem" />
+        <Image src="/logo.png" size="15rem" />
       </div>
     </section>
   );

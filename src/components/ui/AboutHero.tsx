@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Logo } from "./Image";
+import { Image } from "./Image";
 import Slogan from "./Slogan";
 import {
   bgTextColor1,
@@ -18,7 +18,7 @@ const AboutHero = () => {
     >
       <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left gap-6">
         <div className="flex items-center gap-3">
-          <Logo src="/logo.png" size="7rem" />
+          <Image src="/logo.png" size="7rem" />
           <Slogan className="text-3xl" />
         </div>
         <h1 className={cn(textTitle1, bgTextColor1)}>About HTRC</h1>
@@ -30,7 +30,7 @@ const AboutHero = () => {
         </p>
       </div>
       <div className="flex-1 flex justify-center">
-        <Logo
+        <Image
           src="/home-thermal.png"
           alt="HTRC Hero"
           className="w-full max-w-xl drop-shadow-2xl!"

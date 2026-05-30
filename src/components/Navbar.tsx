@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { shadows } from "@/constants/styles";
 import { Link } from "react-router-dom";
 import Slogan from "./ui/Slogan";
-import { Logo } from "./ui/Image";
+import { Image } from "./ui/Image";
 import { navbarTabs } from "@/constants/navbarTabs";
 import NavbarTab from "./ui/NavbarTab";
 import ThemeToggle from "./ThemeToggle";
@@ -24,7 +24,7 @@ const Navbar = () => {
       <nav className="hidden md:flex items-center h-12 rounded-2xl gap-5">
         <div className="flex flex-1 items-center gap-1">
           <Link to="/">
-            <Logo src="/logo.png" size="3.5rem" />
+            <Image src="/logo.png" size="3.5rem" />
           </Link>
           <Slogan className="text-lg" />
         </div>

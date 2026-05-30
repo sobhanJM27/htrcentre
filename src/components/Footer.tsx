@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import SocialIcon from "./ui/SocialIcon";
 import LeftArrow from "./ui/icons/LeftArrow";
 import IconWrapper from "./ui/IconWrapper";
-import { Logo } from "./ui/Image";
+import { Image } from "./ui/Image";
 import LinkedIn from "./ui/icons/Linkedin";
 import Mail from "./ui/icons/Mail";
 import { cn } from "@/lib/utils";
@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="flex max-footer:flex-col gap-4 max-footer:gap-8 px-6 pb-8 justify-between max-footer:items-center">
           <div className="lg:col-span-4 flex flex-col items-center footer:items-start gap-3">
             <Link to="/">
-              <Logo size="4rem" src="./logo.png" />
+              <Image size="4rem" src="./logo.png" />
             </Link>
             <p className="leading-relaxed text-center footer:text-left max-w-sm">
               Professional tools for home thermal efficiency. We make complex

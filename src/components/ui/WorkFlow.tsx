@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 export default function WorkFlow() {
   return (
     <section className="bg-muted/20 px-4 py-16 rounded-xl">
-      <div className="flex flex-col gap-5 mx-auto max-w-4xl">
+      <div className="flex flex-col gap-6 mx-auto max-w-4xl">
         <div className="flex flex-col gap-2 items-center text-center">
           <h2 className={cn(textTitle2)}>How It Works</h2>
           <p>

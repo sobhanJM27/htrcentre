@@ -5,7 +5,7 @@ import BackDrop from "./BackDrop";
 import Close from "./icons/Close";
 import type { booleanStateHandleType } from "@/types/stateFnsTypes";
 import IconWrapper from "./IconWrapper";
-import { Logo } from "./Image";
+import { Image } from "./Image";
 import Slogan from "./Slogan";
 
 type SidebarProps = {
@@ -24,7 +24,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
       >
         <div className="flex justify-between items-start p-6 border-b border-border">
           <div className="flex flex-col gap-2">
-            <Logo src="./logo.png" size="2rem" />
+            <Image src="./logo.png" size="2rem" />
             <Slogan />
           </div>
           <button onClick={() => setOpen(false)}>
