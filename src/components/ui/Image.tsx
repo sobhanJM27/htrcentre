@@ -1,14 +1,14 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 
-export type LogoProps = {
+export type ImageProps = {
   src: string;
   size?: string;
   alt?: string;
   className?: string;
 };
 
-export const Logo: React.FC<LogoProps> = ({
+export const Image: React.FC<ImageProps> = ({
   src,
   size,
   alt = "Logo",

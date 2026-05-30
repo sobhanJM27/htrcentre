@@ -34,15 +34,15 @@ createRoot(document.getElementById("root")!).render(
           success: {
             className: `bg-primary! text-primary-foreground! border border-primary-foreground ${shadows.glow}`,
             iconTheme: {
-              primary: "#10b981",
-              secondary: "#ecfdf5",
+              primary: "rgb(0, 172, 95)", // dark primary
+              secondary: "rgb(243, 251, 246)", // light destructive-foreground
             },
           },
           error: {
             className: `bg-destructive! text-destructive-foreground! border border-destructive-foreground ${shadows.glow}`,
             iconTheme: {
-              primary: "#ef4444",
-              secondary: "#fef2f2",
+              primary: "rgb(255, 35, 53)", // dark destructive
+              secondary: "rgb(252, 234, 232)", // dark destructive-foreground
             },
           },
         }}

@@ -1,18 +1,25 @@
 import { useParams } from "react-router-dom";
 import {
-  border1,
+  mainStyle,
   sectionStyle,
-  shadows,
   textBody1,
   textTitle2,
 } from "@/constants/styles";
 import { cn } from "@/lib/utils";
-import { Logo } from "@/components/ui/Logo";
 import Button from "@/components/ui/Button";
 import { useQuery } from "@tanstack/react-query";
 import { getCompany } from "@/api/company";
 import WithLoaderAndError from "@/components/WithLoaderAndError";
 import SeoTags from "@/utils/seo";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/Card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
 
 const Company = () => {
   const { id } = useParams();
@@ -23,7 +30,7 @@ const Company = () => {
     isError,
     error,
   } = useQuery({
-    queryKey: ["course", id],
+    queryKey: ["company", id],
     queryFn: () => getCompany(id as string),
   });
 
@@ -35,52 +42,62 @@ const Company = () => {
         keywords={`retrofit company, energy retrofit, sustainable buildings, construction technology, retrofit solutions, ${companyData?.name}`}
       />
       <WithLoaderAndError {...{ data: companyData, isLoading, isError, error }}>
-        <main className={cn("mx-auto max-w-5xl flex flex-col", sectionStyle)}>
-          <section
-            className={cn(
-              "flex flex-col rounded-3xl bg-card",
-              shadows.baseCard,
-              border1,
-            )}
-          >
-            <img
-              src={"https://retrofit-nxb4.onrender.com" + companyData?.imageUrl}
-              alt={companyData?.name}
-              className="h-full w-full object-cover rounded-t-3xl"
-            />
-            <div className="flex flex-col gap-8 p-8">
-              <div className="flex items-center gap-4">
-                <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-muted">
-                  <Logo
+        <main className={cn("mx-auto max-w-5xl", mainStyle)}>
+          <section className={sectionStyle}>
+            <Card className="overflow-hidden rounded-3xl flex flex-col gap-3 bg-card">
+              {companyData?.imageUrl && (
+                <img
+                  src={
+                    "https://retrofit-nxb4.onrender.com" + companyData.imageUrl
+                  }
+                  alt={`${companyData?.name} cover`}
+                  className="h-full w-full"
+                />
+              )}
+              <CardHeader className="flex flex-row items-center gap-4">
+                <Avatar size="xl" variant="rounded" className="h-16 w-16">
+                  <AvatarImage
                     src={
                       "https://retrofit-nxb4.onrender.com" +
                       companyData?.logoUrl
                     }
-                    size="2.5rem"
+                    alt={companyData?.name}
+                    className="object-contain bg-white p-1"
                   />
-                </div>
+                  <AvatarFallback className="text-lg bg-muted text-foreground">
+                    {companyData?.name?.charAt(0)}
+                  </AvatarFallback>
+                </Avatar>
                 <div className="flex flex-col">
-                  <h1 className={cn("text-primary", textTitle2)}>
+                  <CardTitle className={cn("text-primary", textTitle2)}>
                     {companyData?.name}
-                  </h1>
-                  <p className="text-sm text-muted-foreground">
-                    Founded by {companyData?.user.firstName}{" "}
-                    {companyData?.user.lastName}
-                  </p>
+                  </CardTitle>
+                  <CardDescription>
+                    Founded by {companyData?.user?.firstName}{" "}
+                    {companyData?.user?.lastName}
+                  </CardDescription>
                 </div>
-              </div>
-              <p className={cn("text-muted-foreground", textBody1)}>
-                {companyData?.description}
-              </p>
-              <div className="flex flex-wrap items-center gap-6">
-                <a href={companyData?.website} target="_blank">
-                  <Button>Visit Website</Button>
-                </a>
+              </CardHeader>
+              <CardContent>
+                <p className={cn("text-muted-foreground", textBody1)}>
+                  {companyData?.description}
+                </p>
+              </CardContent>
+              <CardFooter className="flex flex-wrap items-center gap-6">
+                {companyData?.website && (
+                  <a
+                    href={companyData.website}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Button>Visit Website</Button>
+                  </a>
+                )}
                 <span className="text-sm text-muted-foreground">
-                  Contact: {companyData?.user.email}
+                  Contact: {companyData?.user?.email}
                 </span>
-              </div>
-            </div>
+              </CardFooter>
+            </Card>
           </section>
         </main>
       </WithLoaderAndError>

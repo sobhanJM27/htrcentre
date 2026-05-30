@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { shadows } from "@/constants/styles";
 import { Link } from "react-router-dom";
 import Slogan from "./ui/Slogan";
-import { Logo } from "./ui/Logo";
+import { Logo } from "./ui/Image";
 import { navbarTabs } from "@/constants/navbarTabs";
 import NavbarTab from "./ui/NavbarTab";
 import ThemeToggle from "./ThemeToggle";

@@ -5,7 +5,7 @@ import BackDrop from "./BackDrop";
 import Close from "./icons/Close";
 import type { booleanStateHandleType } from "@/types/stateFnsTypes";
 import IconWrapper from "./IconWrapper";
-import { Logo } from "./Logo";
+import { Logo } from "./Image";
 import Slogan from "./Slogan";
 
 type SidebarProps = {

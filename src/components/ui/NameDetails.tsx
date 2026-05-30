@@ -1,5 +1,5 @@
 import { whyName } from "@/constants/aboutTexts";
-import { Logo } from "./Logo";
+import { Logo } from "./Image";
 import { textBody1, textTitle4 } from "@/constants/styles";
 import { cn } from "@/lib/utils";
 

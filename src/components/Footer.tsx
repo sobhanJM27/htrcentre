@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import SocialIcon from "./ui/SocialIcon";
 import LeftArrow from "./ui/icons/LeftArrow";
 import IconWrapper from "./ui/IconWrapper";
-import { Logo } from "./ui/Logo";
+import { Logo } from "./ui/Image";
 import LinkedIn from "./ui/icons/Linkedin";
 import Mail from "./ui/icons/Mail";
 import { cn } from "@/lib/utils";

@@ -9,6 +9,7 @@ import {
   shadows,
   textTitle3,
 } from "@/constants/styles";
+import { Card, CardContent, CardHeader, CardTitle } from "./Card";
 
 const WhyChoose = () => {
   return (
@@ -23,22 +24,28 @@ const WhyChoose = () => {
       <div className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
         {whyChooseItems.map(({ icon: Icon, title, desc, id }, index) => (
           <Reveal key={id} delay={index * 200} side="bottom">
-            <div
+            <Card
               className={cn(
-                "rounded-xl bg-muted/20 dark:bg-card p-6 text-center h-full",
+                "h-full text-center bg-muted/20 dark:bg-card",
                 shadows.hoverLift,
                 border1,
               )}
             >
-              <IconWrapper
-                hasHoverEffect={false}
-                className="mb-4 inline-flex items-center justify-center rounded-full bg-accent p-3 text-ring cursor-auto"
-              >
-                <Icon className="h-6 w-6" />
-              </IconWrapper>
-              <h3 className="text-lg font-semibold">{title}</h3>
-              <p className="text-sm">{desc}</p>
-            </div>
+              <CardHeader className="flex flex-col items-center pb-2">
+                <IconWrapper
+                  hasHoverEffect={false}
+                  className="mb-4 inline-flex items-center justify-center rounded-full bg-accent p-3 text-ring cursor-auto"
+                >
+                  <Icon className="h-6 w-6" />
+                </IconWrapper>
+                <CardTitle className="text-lg font-semibold text-foreground">
+                  {title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm">{desc}</p>
+              </CardContent>
+            </Card>
           </Reveal>
         ))}
       </div>
