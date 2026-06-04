@@ -28,10 +28,9 @@ export const textTitle3 =
 export const textTitle4 =
   "text-xl sm:text-2xl lg:text-3xl font-semibold leading-normal";
 
-export const textBody1 = "text-base leading-8 text-justify hyphens-auto";
-export const textBody2 =
-  "text-lg leading-8 lg:text-left text-center lg:text-justify hyphens-auto";
-export const textBody3 = "text-base max-w-md leading-relaxed"
+export const textBody1 = "text-base leading-8 text-justify max-sm:text-left";
+export const textBody2 = "text-lg leading-8 text-justify max-sm:text-center";
+export const textBody3 = "text-base max-w-md leading-relaxed";
 
 export const mainStyle = "flex flex-col items-center gap-5 p-8";
 export const sectionStyle = "gap-4 py-16 px-4";

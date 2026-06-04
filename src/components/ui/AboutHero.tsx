@@ -17,9 +17,9 @@ const AboutHero = () => {
       )}
     >
       <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left gap-6">
-        <div className="flex items-center gap-3">
+        <div className="flex max-sm:flex-col items-center gap-3">
           <Image src="/logo.png" size="7rem" />
-          <Slogan className="text-3xl" />
+          <Slogan className="text-3xl max-sm:text-2xl" />
         </div>
         <h1 className={cn(textTitle1, bgTextColor1)}>About HTRC</h1>
         <p className={cn(textBody2)}>

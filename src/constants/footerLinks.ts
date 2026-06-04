@@ -4,8 +4,9 @@ export const footerLinks = [
   {
     title: "Product",
     links: [
-      { name: "Calculator", path: "/calculator", id: uuidv4() },
-      { name: "Companies", path: "/companies", id: uuidv4() },
+      { name: "Calculator", path: "#", id: uuidv4() },
+      { name: "Find Experts", path: "#", id: uuidv4() },
+      { name: "Affiliate Suppliers", path: "#", id: uuidv4() },
     ],
     id: uuidv4(),
   },
@@ -13,8 +14,8 @@ export const footerLinks = [
     title: "Support",
     links: [
       { name: "Help Center", path: "/about-us", id: uuidv4() },
-      { name: "Privacy Policy", path: "about-us", id: uuidv4() },
-      { name: "Terms of Service", path: "about-us", id: uuidv4() },
+      { name: "Privacy Policy", path: "/about-us", id: uuidv4() },
+      { name: "Terms of Service", path: "/about-us", id: uuidv4() },
     ],
     id: uuidv4(),
   },

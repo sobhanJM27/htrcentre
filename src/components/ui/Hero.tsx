@@ -32,7 +32,7 @@ const Hero = () => {
           verified affiliate suppliers.
         </p>
         <a>
-          <Button intent="primary" size="lg">
+          <Button intent="primary" size="lg" className="font-bold">
             <Calculator className="w-5 h-5" />
             Start Thermal Assessment
           </Button>
@@ -45,7 +45,7 @@ const Hero = () => {
           {experts_suppliars.map((item) => (
             <div key={item.id} className="flex flex-col gap-1 items-center">
               <a>
-                <Button intent="primary" size="lg">
+                <Button intent="primary" size="lg" className="font-bold">
                   {item.title}
                 </Button>
               </a>
