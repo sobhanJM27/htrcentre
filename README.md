@@ -48,7 +48,7 @@
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/htrc.git
+git clone https://github.com/your-username/htrcentre.git
 cd htrc
 ```
 
