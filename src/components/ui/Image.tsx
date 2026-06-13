@@ -8,7 +8,7 @@ export type ImageProps = {
   className?: string;
 };
 
-export const Image: React.FC<ImageProps> = ({
+const Image: React.FC<ImageProps> = ({
   src,
   size,
   alt = "Logo",
@@ -23,3 +23,5 @@ export const Image: React.FC<ImageProps> = ({
     </div>
   );
 };
+
+export default Image;

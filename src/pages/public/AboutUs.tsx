@@ -5,10 +5,15 @@ import Founder from "@/components/ui/Founder";
 import NameDetails from "@/components/ui/NameDetails";
 import Trust from "@/components/ui/Trust";
 import Values from "@/components/ui/Values";
-import { whatWeDo, whatWeStarted } from "@/constants/aboutTexts";
-import { mainStyle, textBody1 } from "@/constants/styles";
+import {
+  ourMissionImages,
+  whatWeDo,
+  whatWeStarted,
+} from "@/constants/aboutTexts";
+import { imageHover, mainStyle, textBody1 } from "@/constants/styles";
 import { cn } from "@/lib/utils";
 import SeoTags from "@/utils/seo";
+import Image from "@/components/ui/Image";
 
 export default function AboutPage() {
   return (
@@ -20,7 +25,7 @@ export default function AboutPage() {
       />
       <main className={mainStyle}>
         <AboutHero />
-        <div className="flex flex-col md:flex-row gap-8 lg:gap-12 py-16 px-4">
+        <section className="flex flex-col md:flex-row gap-8 lg:gap-12 py-16 px-4">
           <AboutText title="What We Do">
             {whatWeDo.map((item) => (
               <p key={item.id} className={cn(textBody1)}>
@@ -35,16 +40,32 @@ export default function AboutPage() {
               </p>
             ))}
           </AboutText>
-        </div>
-        <AboutText title="Our Mission" className="px-4">
-          <p className={cn(textBody1)}>
-            Our mission is to simplify thermal retrofit decisions and accelerate
-            energy efficiency improvements in residential buildings. By
-            providing accessible analysis tools and a trusted professional
-            network, HTRC aims to reduce energy waste, improve comfort, and
-            support the transition to more sustainable homes.
-          </p>
-        </AboutText>
+        </section>
+        <section className="grid grid-cols-1 gap-8 lg:gap-12 items-center px-4 py-8">
+          <AboutText title="Our Mission">
+            <p className={cn(textBody1)}>
+              Our mission is to simplify thermal retrofit decisions and
+              accelerate energy efficiency improvements in residential
+              buildings. By providing accessible analysis tools and a trusted
+              professional network, HTRC aims to reduce energy waste, improve
+              comfort, and support the transition to more sustainable homes.
+            </p>
+          </AboutText>
+          <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-4">
+            {ourMissionImages.map((image) => (
+              <div key={image.id} className="rounded-xl overflow-hidden isolate">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  className={cn(
+                    "w-full object-cover rounded-xl overflow-hidden",
+                    imageHover,
+                  )}
+                />
+              </div>
+            ))}
+          </div>
+        </section>
         <Values />
         <Trust />
         <NameDetails />

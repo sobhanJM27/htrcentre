@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Image } from "./Image";
+import Image from "./Image";
 import Slogan from "./Slogan";
 import {
   bgTextColor1,

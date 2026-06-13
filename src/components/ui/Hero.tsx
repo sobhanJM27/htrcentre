@@ -1,6 +1,6 @@
 import Button from "./Button";
 import { experts_suppliars, tags } from "@/constants/tags";
-import { Image } from "./Image";
+import Image from "./Image";
 import { sectionStyle, textTitle1, textTitle4 } from "@/constants/styles";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/utils/reveal";

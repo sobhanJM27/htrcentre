@@ -117,3 +117,31 @@ export const whyName = [
     id: uuidv4(),
   },
 ];
+
+export const ourMissionImages = [
+  {
+    id: uuidv4(),
+    src: "/Breathaboard-installation_CREDIT-Rafael-Bastos.webp",
+    alt: "Breathaboard Installation",
+  },
+  {
+    id: uuidv4(),
+    src: "/insulating-energy-efficient-home.jpg.webp",
+    alt: "Insulating Home",
+  },
+  {
+    id: uuidv4(),
+    src: "/wall-hang.jpg",
+    alt: "Wall Hang",
+  },
+  {
+    id: uuidv4(),
+    src: "/11.jpg",
+    alt: "Retrofit work",
+  },
+  {
+    id: uuidv4(),
+    src: "/Ecofurb-Blog-Home-Retrofit-Unpacked-Article-Image-2025-05-28-Why-invest-in-retrofit.jpg",
+    alt: "Ecofurb Blog",
+  },
+];

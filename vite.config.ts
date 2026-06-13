@@ -12,6 +12,10 @@ export default defineConfig({
     },
   },
   preview: {
-    allowedHosts: ["htrc.onrender.com", "htrcentre.com"],
+    allowedHosts: [
+      "htrc.onrender.com",
+      "htrcentre.com",
+      "htrcentre.uk",
+    ],
   },
 });

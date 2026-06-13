@@ -56,3 +56,5 @@ export const border1 = "border border-border";
 export const border2 =
   "border border-white/10 hover:border-primary/50 transition-all duration-500";
 export const border3 = "border border-primary/20";
+
+export const imageHover = "hover:scale-105 transition-transform duration-300";

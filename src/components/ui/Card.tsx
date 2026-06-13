@@ -37,7 +37,7 @@ function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="card-title"
       className={cn(
-        "text-xl font-semibold leading-none tracking-tight text-primary transition group-hover/card:text-primary/70",
+        "text-xl font-semibold leading-none tracking-tight text-primary transition duration-300 group-hover/card:text-primary/70",
         className,
       )}
       {...props}

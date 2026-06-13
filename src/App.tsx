@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./pages/public/Layout";
 import Home from "./pages/public/Home";
 import Loader from "./components/ui/icons/Loader";
-import ScrollToTop from "./utils/scrollToTops";
+import ScrollToTop from "./utils/scrollToTop";
 
 const Companies = lazy(() => import("./pages/public/Companies"));
 const Company = lazy(() => import("./pages/public/Company"));

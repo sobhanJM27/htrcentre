@@ -37,7 +37,7 @@ const Company = () => {
   return (
     <>
       <SeoTags
-        title={companyData?.name!}
+        title={companyData?.name ? `${companyData.name}` : "Company Details"}
         description={companyData?.description}
         keywords={`retrofit company, energy retrofit, sustainable buildings, construction technology, retrofit solutions, ${companyData?.name}`}
       />

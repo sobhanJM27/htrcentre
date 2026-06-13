@@ -1,12 +1,5 @@
+import { RevealSide } from "@/types/revealTypes";
 import { useInView } from "react-intersection-observer";
-
-export const RevealSide = {
-  LEFT: "left",
-  RIGHT: "right",
-  TOP: "top",
-  BOTTOM: "bottom",
-} as const;
-export type RevealSide = (typeof RevealSide)[keyof typeof RevealSide];
 
 export type RevealProps = {
   children: React.ReactNode;
